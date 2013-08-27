@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D4601B017CD490D00BEA0CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D4601AF17CD490D00BEA0CC /* libPods.a */; };
+		5DDCB7F017CD234000299679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB7EF17CD234000299679 /* Foundation.framework */; };
+		5DDCB7F217CD234000299679 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB7F117CD234000299679 /* CoreGraphics.framework */; };
+		5DDCB7F417CD234000299679 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB7F317CD234000299679 /* UIKit.framework */; };
+		5DDCB7FA17CD234000299679 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCB7F817CD234000299679 /* InfoPlist.strings */; };
+		5DDCB7FC17CD234000299679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCB7FB17CD234000299679 /* main.m */; };
+		5DDCB80017CD234000299679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCB7FF17CD234000299679 /* AppDelegate.m */; };
+		5DDCB80317CD234000299679 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCB80117CD234000299679 /* Main_iPhone.storyboard */; };
+		5DDCB80617CD234000299679 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCB80417CD234000299679 /* Main_iPad.storyboard */; };
+		5DDCB80917CD234000299679 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCB80817CD234000299679 /* ViewController.m */; };
+		5DDCB80B17CD234000299679 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCB80A17CD234000299679 /* Images.xcassets */; };
+		5DDCB81217CD234000299679 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB81117CD234000299679 /* XCTest.framework */; };
+		5DDCB81317CD234000299679 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB7EF17CD234000299679 /* Foundation.framework */; };
+		5DDCB81417CD234000299679 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB7F317CD234000299679 /* UIKit.framework */; };
+		5DDCB81C17CD234000299679 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DDCB81A17CD234000299679 /* InfoPlist.strings */; };
+		5DDCB81E17CD234000299679 /* ZMDDownloadDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCB81D17CD234000299679 /* ZMDDownloadDemoTests.m */; };
+		5DDCB82B17CD23BC00299679 /* ZMDDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCB82A17CD23BC00299679 /* ZMDDownloadManager.m */; };
+		5DDCB84117CD27B000299679 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB84017CD27B000299679 /* SystemConfiguration.framework */; };
+		5DDCB84317CD27B700299679 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDCB84217CD27B700299679 /* MobileCoreServices.framework */; };
+		5DDCB84617CD332200299679 /* ZMDDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DDCB84517CD332200299679 /* ZMDDownloadOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DDCB81517CD234000299679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DDCB7E417CD234000299679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DDCB7EB17CD234000299679;
+			remoteInfo = ZMDDownloadDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32A8514C6A3E4B1ABC9F90CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E9076C72E741C3AB7436A2 /* Pods/Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		5D4601AF17CD490D00BEA0CC /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		5DDCB7EC17CD234000299679 /* ZMDDownloadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMDDownloadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DDCB7EF17CD234000299679 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5DDCB7F117CD234000299679 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5DDCB7F317CD234000299679 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5DDCB7F717CD234000299679 /* ZMDDownloadDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZMDDownloadDemo-Info.plist"; sourceTree = "<group>"; };
+		5DDCB7F917CD234000299679 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5DDCB7FB17CD234000299679 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DDCB7FD17CD234000299679 /* ZMDDownloadDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZMDDownloadDemo-Prefix.pch"; sourceTree = "<group>"; };
+		5DDCB7FE17CD234000299679 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DDCB7FF17CD234000299679 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DDCB80217CD234000299679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5DDCB80517CD234000299679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5DDCB80717CD234000299679 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5DDCB80817CD234000299679 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5DDCB80A17CD234000299679 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5DDCB81017CD234000299679 /* ZMDDownloadDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZMDDownloadDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DDCB81117CD234000299679 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5DDCB81917CD234000299679 /* ZMDDownloadDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZMDDownloadDemoTests-Info.plist"; sourceTree = "<group>"; };
+		5DDCB81B17CD234000299679 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5DDCB81D17CD234000299679 /* ZMDDownloadDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMDDownloadDemoTests.m; sourceTree = "<group>"; };
+		5DDCB82917CD23BC00299679 /* ZMDDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMDDownloadManager.h; sourceTree = "<group>"; };
+		5DDCB82A17CD23BC00299679 /* ZMDDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMDDownloadManager.m; sourceTree = "<group>"; };
+		5DDCB84017CD27B000299679 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5DDCB84217CD27B700299679 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		5DDCB84417CD332200299679 /* ZMDDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMDDownloadOperation.h; sourceTree = "<group>"; };
+		5DDCB84517CD332200299679 /* ZMDDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMDDownloadOperation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DDCB7E917CD234000299679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D4601B017CD490D00BEA0CC /* libPods.a in Frameworks */,
+				5DDCB84317CD27B700299679 /* MobileCoreServices.framework in Frameworks */,
+				5DDCB84117CD27B000299679 /* SystemConfiguration.framework in Frameworks */,
+				5DDCB7F217CD234000299679 /* CoreGraphics.framework in Frameworks */,
+				5DDCB7F417CD234000299679 /* UIKit.framework in Frameworks */,
+				5DDCB7F017CD234000299679 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DDCB80D17CD234000299679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDCB81217CD234000299679 /* XCTest.framework in Frameworks */,
+				5DDCB81417CD234000299679 /* UIKit.framework in Frameworks */,
+				5DDCB81317CD234000299679 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DDCB7E317CD234000299679 = {
+			isa = PBXGroup;
+			children = (
+				5DDCB82817CD23A000299679 /* ZMDDownloadManager */,
+				5DDCB7F517CD234000299679 /* ZMDDownloadDemo */,
+				5DDCB81717CD234000299679 /* ZMDDownloadDemoTests */,
+				5DDCB7EE17CD234000299679 /* Frameworks */,
+				5DDCB7ED17CD234000299679 /* Products */,
+				43E9076C72E741C3AB7436A2 /* Pods/Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		5DDCB7ED17CD234000299679 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DDCB7EC17CD234000299679 /* ZMDDownloadDemo.app */,
+				5DDCB81017CD234000299679 /* ZMDDownloadDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DDCB7EE17CD234000299679 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D4601AF17CD490D00BEA0CC /* libPods.a */,
+				5DDCB84217CD27B700299679 /* MobileCoreServices.framework */,
+				5DDCB84017CD27B000299679 /* SystemConfiguration.framework */,
+				5DDCB7EF17CD234000299679 /* Foundation.framework */,
+				5DDCB7F117CD234000299679 /* CoreGraphics.framework */,
+				5DDCB7F317CD234000299679 /* UIKit.framework */,
+				5DDCB81117CD234000299679 /* XCTest.framework */,
+				32A8514C6A3E4B1ABC9F90CB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DDCB7F517CD234000299679 /* ZMDDownloadDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5DDCB7FE17CD234000299679 /* AppDelegate.h */,
+				5DDCB7FF17CD234000299679 /* AppDelegate.m */,
+				5DDCB80117CD234000299679 /* Main_iPhone.storyboard */,
+				5DDCB80417CD234000299679 /* Main_iPad.storyboard */,
+				5DDCB80717CD234000299679 /* ViewController.h */,
+				5DDCB80817CD234000299679 /* ViewController.m */,
+				5DDCB80A17CD234000299679 /* Images.xcassets */,
+				5DDCB7F617CD234000299679 /* Supporting Files */,
+			);
+			path = ZMDDownloadDemo;
+			sourceTree = "<group>";
+		};
+		5DDCB7F617CD234000299679 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DDCB7F717CD234000299679 /* ZMDDownloadDemo-Info.plist */,
+				5DDCB7F817CD234000299679 /* InfoPlist.strings */,
+				5DDCB7FB17CD234000299679 /* main.m */,
+				5DDCB7FD17CD234000299679 /* ZMDDownloadDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DDCB81717CD234000299679 /* ZMDDownloadDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DDCB81D17CD234000299679 /* ZMDDownloadDemoTests.m */,
+				5DDCB81817CD234000299679 /* Supporting Files */,
+			);
+			path = ZMDDownloadDemoTests;
+			sourceTree = "<group>";
+		};
+		5DDCB81817CD234000299679 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DDCB81917CD234000299679 /* ZMDDownloadDemoTests-Info.plist */,
+				5DDCB81A17CD234000299679 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DDCB82817CD23A000299679 /* ZMDDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				5DDCB82917CD23BC00299679 /* ZMDDownloadManager.h */,
+				5DDCB82A17CD23BC00299679 /* ZMDDownloadManager.m */,
+				5DDCB84417CD332200299679 /* ZMDDownloadOperation.h */,
+				5DDCB84517CD332200299679 /* ZMDDownloadOperation.m */,
+			);
+			path = ZMDDownloadManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DDCB7EB17CD234000299679 /* ZMDDownloadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DDCB82117CD234000299679 /* Build configuration list for PBXNativeTarget "ZMDDownloadDemo" */;
+			buildPhases = (
+				6DFF361791314F6089AC4F72 /* Check Pods Manifest.lock */,
+				5DDCB7E817CD234000299679 /* Sources */,
+				5DDCB7E917CD234000299679 /* Frameworks */,
+				5DDCB7EA17CD234000299679 /* Resources */,
+				1EBB4A29EDD24ACD86DC7956 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZMDDownloadDemo;
+			productName = ZMDDownloadDemo;
+			productReference = 5DDCB7EC17CD234000299679 /* ZMDDownloadDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DDCB80F17CD234000299679 /* ZMDDownloadDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DDCB82417CD234000299679 /* Build configuration list for PBXNativeTarget "ZMDDownloadDemoTests" */;
+			buildPhases = (
+				5DDCB80C17CD234000299679 /* Sources */,
+				5DDCB80D17CD234000299679 /* Frameworks */,
+				5DDCB80E17CD234000299679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DDCB81617CD234000299679 /* PBXTargetDependency */,
+			);
+			name = ZMDDownloadDemoTests;
+			productName = ZMDDownloadDemoTests;
+			productReference = 5DDCB81017CD234000299679 /* ZMDDownloadDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DDCB7E417CD234000299679 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Zian Mobile Development";
+				TargetAttributes = {
+					5DDCB80F17CD234000299679 = {
+						TestTargetID = 5DDCB7EB17CD234000299679;
+					};
+				};
+			};
+			buildConfigurationList = 5DDCB7E717CD234000299679 /* Build configuration list for PBXProject "ZMDDownloadDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DDCB7E317CD234000299679;
+			productRefGroup = 5DDCB7ED17CD234000299679 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DDCB7EB17CD234000299679 /* ZMDDownloadDemo */,
+				5DDCB80F17CD234000299679 /* ZMDDownloadDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DDCB7EA17CD234000299679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDCB80617CD234000299679 /* Main_iPad.storyboard in Resources */,
+				5DDCB80B17CD234000299679 /* Images.xcassets in Resources */,
+				5DDCB80317CD234000299679 /* Main_iPhone.storyboard in Resources */,
+				5DDCB7FA17CD234000299679 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DDCB80E17CD234000299679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDCB81C17CD234000299679 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EBB4A29EDD24ACD86DC7956 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DFF361791314F6089AC4F72 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DDCB7E817CD234000299679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDCB80917CD234000299679 /* ViewController.m in Sources */,
+				5DDCB82B17CD23BC00299679 /* ZMDDownloadManager.m in Sources */,
+				5DDCB80017CD234000299679 /* AppDelegate.m in Sources */,
+				5DDCB7FC17CD234000299679 /* main.m in Sources */,
+				5DDCB84617CD332200299679 /* ZMDDownloadOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DDCB80C17CD234000299679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDCB81E17CD234000299679 /* ZMDDownloadDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DDCB81617CD234000299679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DDCB7EB17CD234000299679 /* ZMDDownloadDemo */;
+			targetProxy = 5DDCB81517CD234000299679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DDCB7F817CD234000299679 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DDCB7F917CD234000299679 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5DDCB80117CD234000299679 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DDCB80217CD234000299679 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5DDCB80417CD234000299679 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DDCB80517CD234000299679 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5DDCB81A17CD234000299679 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DDCB81B17CD234000299679 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DDCB81F17CD234000299679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zian Chen (2V25FHFQ85)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DDCB82017CD234000299679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zian Chen (2V25FHFQ85)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DDCB82217CD234000299679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E9076C72E741C3AB7436A2 /* Pods/Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMDDownloadDemo/ZMDDownloadDemo-Prefix.pch";
+				INFOPLIST_FILE = "ZMDDownloadDemo/ZMDDownloadDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5DDCB82317CD234000299679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E9076C72E741C3AB7436A2 /* Pods/Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMDDownloadDemo/ZMDDownloadDemo-Prefix.pch";
+				INFOPLIST_FILE = "ZMDDownloadDemo/ZMDDownloadDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5DDCB82517CD234000299679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZMDDownloadDemo.app/ZMDDownloadDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMDDownloadDemo/ZMDDownloadDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ZMDDownloadDemoTests/ZMDDownloadDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5DDCB82617CD234000299679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZMDDownloadDemo.app/ZMDDownloadDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZMDDownloadDemo/ZMDDownloadDemo-Prefix.pch";
+				INFOPLIST_FILE = "ZMDDownloadDemoTests/ZMDDownloadDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DDCB7E717CD234000299679 /* Build configuration list for PBXProject "ZMDDownloadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DDCB81F17CD234000299679 /* Debug */,
+				5DDCB82017CD234000299679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DDCB82117CD234000299679 /* Build configuration list for PBXNativeTarget "ZMDDownloadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DDCB82217CD234000299679 /* Debug */,
+				5DDCB82317CD234000299679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DDCB82417CD234000299679 /* Build configuration list for PBXNativeTarget "ZMDDownloadDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DDCB82517CD234000299679 /* Debug */,
+				5DDCB82617CD234000299679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DDCB7E417CD234000299679 /* Project object */;
+}
