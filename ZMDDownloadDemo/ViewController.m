@@ -47,7 +47,7 @@
         [[ZMDDownloadManager sharedInstance] fetchWithTerm:searchTerm withPriority:NSOperationQueuePriorityNormal];
     }
     
-    [[ZMDDownloadManager sharedInstance] prioritizeURLStrings:priorityArray];
+    [[ZMDDownloadManager sharedInstance] prioritizeRequestNames:priorityArray];
     
     //[[ZMDDownloadManager sharedInstance] checkOperations];
     

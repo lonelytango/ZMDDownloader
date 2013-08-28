@@ -23,7 +23,6 @@
     if (self) {
         _client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"https://itunes.apple.com"]];
         _fetchQueue = [NSOperationQueue new];
-        [_fetchQueue setMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
     }
     return self;
 }
@@ -63,19 +62,23 @@
 }
 
 
-- (void)prioritizeURLStrings:(NSArray *)array {
+- (void)prioritizeRequestNames:(NSArray *)array {
     
+    //Temporarily suspend the queue to start modification.
+    [_fetchQueue setSuspended:YES];
+    
+    //Counter to keep track of priority fetch count.
     __block int priorityDoneCount = 0;
     
-    for (ZMDDownloadOperation *operation in [_fetchQueue operations]) {
+    for (ZMDDownloadOperation *op in [_fetchQueue operations]) {
         
-        if ([array containsObject:operation.requestName]) {
+        if ([array containsObject:op.requestName]) {
             
-            NSLog(@"set operation to high: %@", operation.requestName);
+            NSLog(@"set operation to high: %@", op.requestName);
             
-            operation.queuePriority = NSOperationQueuePriorityVeryHigh;
+            op.queuePriority = NSOperationQueuePriorityVeryHigh;
             
-            [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
                 
                 priorityDoneCount++;
                 
@@ -89,9 +92,11 @@
             }];
         
         } else {
-            [operation pause];
+            [op pause];
         }
     }
+    
+    [_fetchQueue setSuspended:NO];
 }
 
 - (void)resumeAllOperations {
