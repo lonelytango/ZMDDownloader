@@ -20,50 +20,36 @@
     [super viewDidLoad];
     
     
-    NSArray *fetchURLStrings = @[@"https://itunes.apple.com/search?term=jack+johnson&limit=10",
-                                 @"https://itunes.apple.com/search?term=priscilla&limit=10",
-                                 @"https://itunes.apple.com/search?term=nadia&limit=10",
-                                 @"https://itunes.apple.com/search?term=allin&limit=10",
-                                 @"https://itunes.apple.com/search?term=dave+alvin&limit=10",
-                                 @"https://itunes.apple.com/search?term=anastacia&limit=10",
-                                 @"https://itunes.apple.com/search?term=ken+andrews&limit=10",
-                                 @"https://itunes.apple.com/search?term=michael+andrews&limit=10",
-                                 @"https://itunes.apple.com/search?term=david+archuleta&limit=10",
-                                 @"https://itunes.apple.com/search?term=billie+joe&limit=10",
-                                 @"https://itunes.apple.com/search?term=louis+armstrong&limit=10",
-                                 @"https://itunes.apple.com/search?term=joseph+arthur&limit=10",
-                                 @"https://itunes.apple.com/search?term=chuck&limit=10",
-                                 @"https://itunes.apple.com/search?term=crystal&limit=10",
-                                 @"https://itunes.apple.com/search?term=sara+bareilles&limit=10",
-                                 @"https://itunes.apple.com/search?term=jon+bon&limit=10",
-                                 @"https://itunes.apple.com/search?term=olivia&limit=10",
-                                 @"https://itunes.apple.com/search?term=karl+blau&limit=10",
-                                 @"https://itunes.apple.com/search?term=brandon&limit=10",
-                                 @"https://itunes.apple.com/search?term=ralston&limit=10",
-                                 @"https://itunes.apple.com/search?term=colin&limit=10",
-                                 @"https://itunes.apple.com/search?term=mark+foster&limit=10",
-                                 @"https://itunes.apple.com/search?term=glenn+frey&limit=10",
-                                 @"https://itunes.apple.com/search?term=david+gates&limit=10",
-                                 @"https://itunes.apple.com/search?term=hank+green&limit=10",
-                                 @"https://itunes.apple.com/search?term=dave+grohl&limit=10",
-                                 @"https://itunes.apple.com/search?term=robert+hunter&limit=10",
-                                 @"https://itunes.apple.com/search?term=janis+joplin&limit=10",
-                                 @"https://itunes.apple.com/search?term=kenna&limit=10"
+    NSArray *fetchURLStrings = @[@"jack johnson",
+                                 @"priscilla",
+                                 @"nadia",
+                                 @"allin",
+                                 @"dave alvin",
+                                 @"anastacia",
+                                 @"ken andrew",
+                                 @"michael andrews",
+                                 @"david archuleta",
+                                 @"billie joe",
+                                 @"louis armstrong",
+                                 @"joseph arthur",
+                                 @"chuck",
+                                 @"crystal",
+                                 @"sara bareilles",
+                                 @"jon bon"
                                  ];
     
-    NSArray *priorityArray = @[@"https://itunes.apple.com/search?term=joseph+arthur&limit=10",
-                               @"https://itunes.apple.com/search?term=chuck&limit=10",
-                               @"https://itunes.apple.com/search?term=crystal&limit=10",
-                               @"https://itunes.apple.com/search?term=sara+bareilles&limit=10"];
+    NSArray *priorityArray = @[@"chuck",
+                               @"crystal",
+                               @"sara bareilles",
+                               @"jon bon"];
     
-    for (NSString *urlString in fetchURLStrings) {
-        NSURL *url = [NSURL URLWithString:urlString];
-        [[ZMDDownloadManager sharedInstance] fetchWithURL:url withPriority:NSOperationQueuePriorityLow];
+    for (NSString *searchTerm in fetchURLStrings) {
+        [[ZMDDownloadManager sharedInstance] fetchWithTerm:searchTerm withPriority:NSOperationQueuePriorityNormal];
     }
     
     [[ZMDDownloadManager sharedInstance] prioritizeURLStrings:priorityArray];
     
-    [[ZMDDownloadManager sharedInstance] checkOperations];
+    //[[ZMDDownloadManager sharedInstance] checkOperations];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

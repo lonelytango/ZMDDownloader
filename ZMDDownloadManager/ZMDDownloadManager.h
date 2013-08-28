@@ -14,7 +14,7 @@
 
 - (void)checkOperations;
 
-- (void)fetchWithURL:(NSURL *)url withPriority:(NSOperationQueuePriority)priority;
+- (void)fetchWithTerm:(NSString *)searchTerm withPriority:(NSOperationQueuePriority)priority;
 
 - (void)prioritizeURLStrings:(NSArray *)array;
 

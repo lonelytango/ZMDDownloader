@@ -9,5 +9,5 @@
 #import "AFJSONRequestOperation.h"
 
 @interface ZMDDownloadOperation : AFJSONRequestOperation
-//@property (nonatomic, )
+@property (nonatomic, copy) NSString *requestName;
 @end

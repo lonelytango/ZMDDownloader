@@ -7,6 +7,7 @@
 //
 
 #import "ZMDDownloadManager.h"
+#import "ZMDDownloadOperation.h"
 
 #define REMOTE_PROD_SERVER @"http://www.people.com/people/recipe/app/json/"
 
@@ -22,32 +23,30 @@
     if (self) {
         _client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"https://itunes.apple.com"]];
         _fetchQueue = [NSOperationQueue new];
-        [_fetchQueue setMaxConcurrentOperationCount:8];
+        [_fetchQueue setMaxConcurrentOperationCount:NSOperationQueueDefaultMaxConcurrentOperationCount];
     }
     return self;
 }
 
 
-- (void)fetchWithURL:(NSURL *)url withPriority:(NSOperationQueuePriority)priority {
+- (void)fetchWithTerm:(NSString *)searchTerm withPriority:(NSOperationQueuePriority)priority {
     
-    //NSDictionary *params = @{@"term": searchTerm};
-    //NSMutableURLRequest *request = [_client requestWithMethod:@"GET"
-    //                                                     path:@"search"
-    //                                               parameters:params];
+    NSDictionary *params = @{@"term": searchTerm,
+                             @"limit": @(10)};
+    NSMutableURLRequest *request = [_client requestWithMethod:@"GET"
+                                                         path:@"search"
+                                                   parameters:params];
     
     //NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/search?term=jack+johnson"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    AFJSONRequestOperation *op = [[AFJSONRequestOperation alloc] initWithRequest:request];
+    ZMDDownloadOperation *op = [[ZMDDownloadOperation alloc] initWithRequest:request];
+    op.requestName = searchTerm;
     [op setQueuePriority:priority];
-    
-    [op setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
-        NSLog(@"Total written: %lld, %lld", totalBytesRead, totalBytesExpectedToRead);
-    }];
     
     [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"Response object: %@", responseObject);
-        NSLog(@"%@ DONE", operation.request.URL);
+        NSLog(@"%@ DONE", searchTerm);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -58,30 +57,46 @@
 
 - (void)checkOperations {
     
-    for (AFJSONRequestOperation *operation in [_fetchQueue operations]) {
+    for (ZMDDownloadOperation *operation in [_fetchQueue operations]) {
         NSLog(@"Operation: %@\nIs executing: %d", operation.request.URL, operation.isExecuting);
     }
 }
 
 
 - (void)prioritizeURLStrings:(NSArray *)array {
-    for (NSString *urlString in array) {
-        for (AFJSONRequestOperation *operation in [_fetchQueue operations]) {
-//            if (operation.isExecuting) {
-//                [operation pause];
-//            }
+    
+    __block int priorityDoneCount = 0;
+    
+    for (ZMDDownloadOperation *operation in [_fetchQueue operations]) {
+        
+        if ([array containsObject:operation.requestName]) {
             
-            if ([operation.request.URL.absoluteString isEqualToString:urlString]) {
-                operation.queuePriority = NSOperationQueuePriorityVeryHigh;
-                //[operation cancel];
+            NSLog(@"set operation to high: %@", operation.requestName);
+            
+            operation.queuePriority = NSOperationQueuePriorityVeryHigh;
+            
+            [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
                 
-                //AFJSONRequestOperation *newOperation = [[AFJSONRequestOperation alloc] initWithRequest:operation.request];
-                //newOperation.queuePriority = NSOperationQueuePriorityVeryHigh;
-                //[_fetchQueue addOperation:newOperation];
+                priorityDoneCount++;
                 
-                NSLog(@"set operation to high: %@", operation.request.URL.absoluteString);
-            }
+                //When priority fetch are all done, resume the rest of operations.
+                if (priorityDoneCount == [array count]) {
+                    [self resumeAllOperations];
+                }
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                NSLog(@"Error in priority block: %@", [error localizedDescription]);
+            }];
+        
+        } else {
+            [operation pause];
         }
+    }
+}
+
+- (void)resumeAllOperations {
+    for (ZMDDownloadOperation *operation in [_fetchQueue operations]) {
+        [operation resume];
     }
 }
 
